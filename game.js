@@ -147,7 +147,7 @@ function calcDist(G,D){
             if(l<b){left = true}else{bot=true}
         }
     }
-    //find dist by similar triangles
+    //find dist by similar triangles, adjust for velocity
     if(topint){D.nextBounce = "t";return abs((G.BOUNDS_TOP-D.pos.y)/D.normVel.y)}
     if(bot){D.nextBounce = "b";return abs((G.BOUNDS_BOT-D.pos.y)/D.normVel.y)}
     if(left){D.nextBounce = "l";return abs((G.BOUNDS_LEFT-D.pos.x)/D.normVel.x)}
